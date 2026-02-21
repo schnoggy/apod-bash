@@ -16,4 +16,6 @@ if [ "$apod_media_type" == "\"image\"" ];
 then
         apod_hd_url=$(echo $apod_json | jq .hdurl)
         gsettings set org.gnome.desktop.background picture-uri $apod_hd_url
+        gsettings set org.gnome.desktop.background picture-uri-dark $apod_hd_url
+
 fi
